@@ -23,7 +23,7 @@ service serviceName on hx {
         path: "/"
     }
     resource function hello(http:Caller caller, http:Request request) returns error? {
-        check caller->respond("5444!");
+        check caller->respond("5444xx!");
     }
 
 }
