@@ -13,5 +13,5 @@ action "actions/aws/kubectl@master" {
   uses = "actions/aws/kubectl@master"
   needs = ["ballerina-platform/github-actions/cli/latest@master"]
   secrets = ["KUBE_CONFIG_DATA"]
-  args = "kubectl apply -f /github/workspace/kubernetes/"
+  args = "apply -f /github/workspace/kubernetes/"
 }
