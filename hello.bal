@@ -8,7 +8,7 @@ import ballerinax/kubernetes;
 listener http:Listener hx = new(8080);
 
 @kubernetes:Deployment {
-    image: "$env{docker_username}/bk8s-sample-hello-$env{GITHUB_SHA}XX",
+    image: "$env{docker_username}/bk8s-sample-hello-$env{GITHUB_SHA}",
     push: true,
     username: "$env{docker_username}",
     password: "$env{docker_password}",
