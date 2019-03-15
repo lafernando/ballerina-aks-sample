@@ -8,7 +8,7 @@ import ballerinax/kubernetes;
 listener http:Listener hx = new(8080);
 
 @kubernetes:Deployment {
-    image: "$env{docker_username}/ballerina-aks-sample-hello-$env{GITHUB_SHA}",
+    image: "$env{docker_username}/ballerina-aks-sample-hello",
     push: true,
     username: "$env{docker_username}",
     password: "$env{docker_password}",
@@ -23,7 +23,7 @@ service serviceName on hx {
         path: "/"
     }
     resource function hello(http:Caller caller, http:Request request) returns error? {
-        check caller->respond("Hello, BallerinaX!");
+        check caller->respond("Hello, Ballerina!");
     }
 
 }
